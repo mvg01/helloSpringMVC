@@ -19,14 +19,15 @@
     </properties>
 
     <dependencies>
-        <!-- Spring Web MVC -->
+
+        <!-- 🔧 Spring Web MVC: 컨트롤러, 뷰 리졸버 등 MVC 구조 구현 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${org.springframework-version}</version>
         </dependency>
 
-        <!-- Lombok -->
+        <!-- 🧵 Lombok: @Getter, @Setter 등 반복 코드 자동 생성 -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -34,13 +35,14 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Logging -->
+        <!-- 📋 Logging: SLF4J 로깅 인터페이스 -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${org.slf4j-version}</version>
         </dependency>
 
+        <!-- 🔁 JCL to SLF4J bridge (JCL -> SLF4J로 연결) -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
@@ -48,6 +50,7 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- 🧱 Logback: SLF4J 구현체 (실제 로그 출력) -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
@@ -55,7 +58,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Jakarta EE -->
+        <!-- 🌐 Jakarta Servlet API (서블릿 기능) -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
@@ -63,6 +66,7 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- 🌐 Jakarta JSP API (JSP 기능) -->
         <dependency>
             <groupId>jakarta.servlet.jsp</groupId>
             <artifactId>jakarta.servlet.jsp-api</artifactId>
@@ -70,19 +74,14 @@
             <scope>provided</scope>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>javax.servlet</groupId>-->
-<!--            <artifactId>jstl</artifactId>-->
-<!--            <version>1.2</version>-->
-<!--        </dependency>-->
-
+        <!-- 📄 JSTL: JSP에서 조건문, 반복문 등을 사용할 수 있도록 지원 -->
         <dependency>
             <groupId>org.glassfish.web</groupId>
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
             <version>2.0.0</version>
         </dependency>
 
-        <!-- Test (JUnit 5) -->
+        <!-- 🧪 JUnit 5: 단위 테스트용 프레임워크 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
@@ -90,29 +89,70 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- 🔌 Spring JDBC: JDBC를 Spring 방식으로 사용 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
             <version>${org.springframework-version}</version>
         </dependency>
 
+        <!-- 🛢️ MySQL JDBC 드라이버 -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.32</version>
         </dependency>
 
+        <!-- 🧼 커넥션 풀 (DB 연결 효율적 관리) -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-dbcp2</artifactId>
             <version>2.12.0</version>
         </dependency>
 
+        <!-- 🧪 Hibernate Validator: 입력값 검증 (@NotEmpty 등) -->
         <dependency>
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>7.0.5.Final</version>
         </dependency>
 
+        <!-- 🔗 Spring ORM: JPA, Hibernate 연동 지원 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+        <!-- 🔄 트랜잭션 처리 API -->
+        <dependency>
+            <groupId>jakarta.transaction</groupId>
+            <artifactId>jakarta.transaction-api</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <!-- 📦 JPA API (Entity, Repository 등 기본 인터페이스) -->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <!-- 🏗️ Hibernate Core: JPA 구현체 (실제 ORM 동작 담당) -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.5.2.Final</version>
+        </dependency>
+
+        <!-- 🧪 Spring 단위 테스트 지원 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${org.springframework-version}</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
+
 </project>
